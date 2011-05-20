@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+/**
+ * Content controller general CSS file
+ *
+ * ID:s that are used by layout and layout.css and must not be used to avoid duplicate id's:
+ * #alert 
+ * #background
+ * #container 
+ * #header 
+ * #title
+ * #search
+ * #search-top
+ * #search-field 
+ * #globalSearch
+ * #search-submit
+ * #submitsearch 
+ * #select
+ */
+ 
+ /**
+ * CSS "constants" cheat sheet
+ *
+ * RED 		= #D21034
+ * BLUE		= #0089CF
+ * GREEN	= #4B9B07
+ * YELLOW	= #FFC726
+ * DEEPBLUE	= #003581
+ * GREY		= #CCCCCC
+ */
+ 
+.rsslogo { height: 18px; width: 18px; padding-left: 5px; vertical-align: middle; }
+ 
+#contents h2 { font-size: 18px; color: #CCCCCC; padding: 0px 0px 10px 0px; margin-top: 15px; }
+#contents h2 img.minilogo { margin: 0px 5px 0px 5px; vertical-align: middle; }
+#contents #content-list { font-size: 18px; margin-top: 15px; }
+

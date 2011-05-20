@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+
+/* Sidebar */
+#sidebar.left { float:left !important; margin-top:10px; } 
+
+#sidebar { width:200px; float:right; margin-right:13px; }
+#sidebar h2 { font-size:1.15em; background:transparent url("../img/gray_dot_line_200.png") bottom no-repeat; color: #C0C0C0; padding:0px 0px 5px 0px; margin-top:20px; }
+
+#sidebar .box h2 { font-size:1.2em; margin:3px 3px 4px 0px; padding:0px; background:none; color: #C0C0C0; }
+#sidebar .box h4 { font-size:.9em; margin:3px 3px 3px 7px; padding:0px; color: #C0C0C0; }
+#sidebar .box h5 { font-size:1em; margin:0px 3px 0px 0px; padding:0px; color: #C0C0C0; }
+#sidebar .box-content { background:#f2f2f2;font-size:.9em; border:1px solid #ccc; padding:0px 10px 0px 10px; }
+#sidebar .box-user-content { background:#f2f2f2;font-size:.9em; border:1px solid #ccc; padding:8px; }
+#sidebar .box-user-content ul li { list-style:none; }
+#sidebar .box-user-content .send-message input { margin:8px 0px 8px 0px; width:100%; }
+
+#sidebar ul.tags  { padding:0px; margin:0px; clear:both; font-size:.8em; }
+#sidebar ul.tags li { float:left; list-style:none; display:inline; margin:0px 5px 0px 0px; }
+#sidebar ul.users { padding:0px; margin:0px 0px 10px 0px; }
+#sidebar ul.users li { list-style:none; }
+
+#sidebar .info-box h2 { font-size:1.2em; margin:3px 3px 4px 0px; padding:0px; background:none; }
+#sidebar .info-content { background:#f2f2f2;font-size:.9em; border:1px solid #ccc; padding:0px 10px 0px 10px; }
+
+#sidebar img.avatar { width:50px; height: 50px; float:left; margin:0px 10px 0px 0px; }
+
+#sidebar #more-from-author h4,
+#sidebar #related-contents h4 { background:transparent url("../images/triangle.png") no-repeat 0px 4px; padding-left:10px; }
+
+/* Sidebar --> Scrollbox */
+#sidebar .scroll-box { max-height:300px; border:1px solid #ccc; overflow:auto; overflow-x: hidden; margin-top:5px; }
+#sidebar .scroll-box p { margin-left:10px; }
+#sidebar .scroll-box ul li { margin:15px 5px; padding-left:5px; }
+#sidebar .scroll-box ul li.challenge  { border-left:3px solid #D21034; }
+#sidebar .scroll-box ul li.idea { border-left:3px solid #4B9B07; }
+#sidebar .scroll-box ul li.vision { border-left:3px solid #FFC726; }
+
+/* Sidebar --> Campaings & Groups*/
+#sidebar #campaigns p, #sidebar #groups p { margin:15px 0px 20px 15px; }
+/** #sidebar #campaigns ul, #sidebar #groups ul { margin:-8px 0px; padding:0px; } */
+#sidebar #campaigns ul li, #sidebar #groups ul li {
+	/*background:transparent url("../images/gray_dot_line_200.png") bottom no-repeat;*/
+	padding:5px 0px 5px 2px;
+	list-style:none; }
+
+#sidebar #campaigns ul li span, #sidebar #groups ul li span { padding:0px 0px 0px 5px; display:block; }
+
+#sidebar ul.campaigns li.cmp span { border-left:5px solid #003581; }
+#sidebar ul.groups li.grp span { border-left:5px solid #0089CF; }

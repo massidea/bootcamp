@@ -1,0 +1,95 @@
+@CHARSET "UTF-8";
+/**
+ * Content controller general CSS file
+ *
+ * ID:s that are used by layout and layout.css and must not be used to avoid duplicate id's:
+ * #alert 
+ * #background
+ * #container 
+ * #header 
+ * #title
+ * #search
+ * #search-top
+ * #search-field 
+ * #globalSearch
+ * #search-submit
+ * #submitsearch 
+ * #select
+ */
+ 
+ /**
+ * CSS "constants" cheat sheet
+ *
+ * RED 		= #D21034
+ * BLUE		= #0089CF
+ * GREEN	= #4B9B07
+ * YELLOW	= #FFC726
+ * DEEPBLUE	= #003581
+ * GREY		= #CCCCCC
+ */
+
+#contents #add-page #form_content_realcontent { display: block; }
+#contents #add-page #linked, #contents #add-page #linked-with { border: 1px solid #CCCCCC; color: #9C9C9C; font-size: 12px; margin: -3px 0 5px; padding: 10px; }
+#contents #add-page #linked .link-target,
+#contents #add-page #linked-with .link-target { float: left; width: 70px; }
+
+#contents #add-page #linked .linked-challenge,
+#contents #add-page #linked-with .linked-challenge,
+#contents #add-page #linked .linked-idea,
+#contents #add-page #linked-with .linked-idea,
+#contents #add-page #linked .linked-vision,
+#contents #add-page #linked-with .linked-vision { color: #000000; float: right; padding-left: 10px; width: 390px; }
+
+#contents #add-page #linked .linked-challenge,
+#contents #add-page #linked-with .linked-challenge { border-left: 5px solid #D21034; }
+
+#contents #add-page #linked .linked-idea,
+#contents #add-page #linked-with .linked-idea { border-left: 5px solid #4B9B07; }
+
+#contents #add-page #linked .linked-vision,
+#contents #add-page #linked-with .linked-vision { border-left: 5px solid #FFC726; }
+
+#contents #add-page #NodeAddForm { background: url("../../img/gray_dot_line_500.png") no-repeat scroll left bottom transparent; color: #A7A7A7; padding-bottom: 5px; }
+#contents #add-page #NodeAddForm label strong { float: left; margin-left: 2px; }
+#contents #add-page #NodeAddForm small { font-size: 12px; }
+
+#contents #add-page #NodeAddForm input,
+#contents #add-page #NodeAddForm textarea { background: none repeat scroll 0 0 #FAFAFA; border: 1px solid #7F9DB9; float: left; margin: 3px 0; min-height: 18px; padding: 2px; width: 384px; }
+
+#contents #add-page #NodeAddForm .field-label,
+#contents #add-page #NodeAddForm .field { float: left; width: 384px; }
+
+#contents #add-page #NodeAddForm .limit { border: 1px solid #7F9DB9; color: #000000; float: right; height: 17px; margin: 3px 0; padding: 3px 0 2px; text-indent: 20px; width: 109px; }
+#contents #add-page #NodeAddForm .limit.ok { background: url("../../img/icon_thumb_up.png") no-repeat scroll 1px 50% #F0FEE9; }
+#contents #add-page #NodeAddForm .limit.bad { background: url("../../img/icon_thumb_down.png") no-repeat scroll 1px 50% #FFCFCF; }
+#contents #add-page #NodeAddForm textarea#textlead { height: 49px; }
+#contents #add-page #NodeAddForm textarea#text { height: 232px; }
+
+#contents #add-page #NodeAddForm .row { margin-top: 4px; }
+#contents #add-page #NodeAddForm .row.upload { margin: 10px 0 75px; }
+
+#contents #add-page #NodeAddForm .row.upload .field,
+#contents #add-page #NodeAddForm .row.upload .field-label,
+#contents #add-page #NodeAddForm .row.upload .field input#upload { width: 307px !important; }
+
+#contents #add-page #NodeAddForm .row.upload #browse,
+#contents #add-page #NodeAddForm .row.upload #upload-file { height: 22px; }
+#contents #add-page #NodeAddForm .row.upload #browse { font-weight: normal; margin: 4px 5px 0 10px; width: 80px; }
+#contents #add-page #NodeAddForm .row.upload #upload-file { margin-top: 4px; width: 95px; }
+
+#contents #add-page #language,
+#contents #add-page #industry-classification,
+#contents #add-page #innovation-type-classification,
+#contents #add-page #visions-of-the-future-classification { background: url("../../img/gray_dot_line_500.png") no-repeat scroll left bottom transparent; padding-bottom: 5px; }
+#contents #add-page select { margin: 3px 0; width: 390px; }
+#contents #add-page .submit { margin-top: 10px; }
+#contents #add-page #content_send input { width: 100px; }
+#contents #add-page #content_send input.ok { background: url("../../img/icon_thumb_up.png") no-repeat scroll 1px 50% #F0FEE9 }
+#contents #add-page #content_send input.bad { background: url("../../img/icon_thumb_down.png") no-repeat scroll 1px 50% #FFCFCF; }
+
+
+#contents #add-page #content_publish input, #contents #add-page #content_publish label { float:left; }
+#contents #add-page #content_publish input { width: 30px; }
+#contents #add-page #content_publish label { margin-top: 3px; }
+
+

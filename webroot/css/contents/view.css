@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+/**
+ * Content controller view action CSS file
+ *
+ * ID:s that are used by layout and layout.css and must not be used to avoid duplicate id's:
+ * #alert 
+ * #background
+ * #container 
+ * #header 
+ * #title
+ * #search
+ * #search-top
+ * #search-field 
+ * #globalSearch
+ * #search-submit
+ * #submitsearch 
+ * #select
+ */
+ 
+ /**
+ * CSS "constants" cheat sheet
+ *
+ * RED 		= #D21034
+ * BLUE		= #0089CF
+ * GREEN	= #4B9B07
+ * YELLOW	= #FFC726
+ * DEEPBLUE	= #003581
+ * GREY		= #CCCCCC
+ */
+ 
+#contents #view-page .avatar { width: 100px; height: 100px; }
+
+#contents #view-page #linked { font-size: 0.85em; }
+#contents #view-page #linked #linked-container { height: 200px; overflow: auto; }  
+#contents #view-page #linked #linked-challenges { border-bottom: 1px solid #CCCCCC; color: #D21034; padding: 8px; }
+#contents #view-page #linked #linked-visions { color: #FFC726; padding: 8px; }
+#contents #view-page #linked #linked-ideas { border-bottom: 1px solid #CCCCCC; color: #4B9B07; padding: 8px; }
+#contents #view-page #linked #linked-challenges a { color: #0089CF; }
+
+#add_new_link { padding: 0px 0px 0px 0px; display: none; background-color: #eee; }
+#add_new_link #ContentsLinkForm { margin-top: 5px; margin-left: 5px; }
+#add_new_link #ContentsLinkForm input { width: 190px; }
+#add_new_link #add_new_link_buttons { width: 360px; margin-top: 3px; }
+#add_new_link #add_new_link_buttons a { display: block; float: right; padding-left: 5px; color: #0089CF; }
+#add_new_link .add_new_link_list { float: left; background-color: #fff; border: 1px solid #AAA; margin: 10px 5px; }
+#add_new_link .add_new_link_list ul { overflow: auto; height: 180px; width: 618px; }
+#add_new_link .add_new_link_list ul img { padding-right: 5px; }
+#add_new_link .add_new_link_list ul li { margin: 5px; padding-left: 5px; width: 95%; }
+#add_new_link .add_new_link_list ul li .linked-title { width: 95%; }
+
+#add_new_link .box { background-color: #fff; border: 1px solid #AAA; margin: 5px 5px; padding: 5px;}
+
+#content-top #related-info { font-size: 0.85em; }
+
+#contents #view-page .link_deleted { background-color: #CCCCCC; }
+#contents #view-page .link_deleted a { color: #000; }
+

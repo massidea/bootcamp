@@ -1,0 +1,95 @@
+@CHARSET "UTF-8";
+/**
+ * Content controller general CSS file
+ *
+ * ID:s that are used by layout and layout.css and must not be used to avoid duplicate id's:
+ * #alert 
+ * #background
+ * #container 
+ * #header 
+ * #title
+ * #search
+ * #search-top
+ * #search-field 
+ * #globalSearch
+ * #search-submit
+ * #submitsearch 
+ * #select
+ */
+ 
+ /**
+ * CSS "constants" cheat sheet
+ *
+ * RED 		= #D21034
+ * BLUE		= #0089CF
+ * GREEN	= #4B9B07
+ * YELLOW	= #FFC726
+ * DEEPBLUE	= #003581
+ * GREY		= #CCCCCC
+ */
+
+#contents #edit-page #form_content_realcontent { display: block; }
+#contents #edit-page #linked, #contents #edit-page #linked-with { border: 1px solid #CCCCCC; color: #9C9C9C; font-size: 12px; margin: -3px 0 5px; padding: 10px; }
+#contents #edit-page #linked .link-target,
+#contents #edit-page #linked-with .link-target { float: left; width: 70px; }
+
+#contents #edit-page #linked .linked-challenge,
+#contents #edit-page #linked-with .linked-challenge,
+#contents #edit-page #linked .linked-idea,
+#contents #edit-page #linked-with .linked-idea,
+#contents #edit-page #linked .linked-vision,
+#contents #edit-page #linked-with .linked-vision { color: #000000; float: right; padding-left: 10px; width: 390px; }
+
+#contents #edit-page #linked .linked-challenge,
+#contents #edit-page #linked-with .linked-challenge { border-left: 5px solid #D21034; }
+
+#contents #edit-page #linked .linked-idea,
+#contents #edit-page #linked-with .linked-idea { border-left: 5px solid #4B9B07; }
+
+#contents #edit-page #linked .linked-vision,
+#contents #edit-page #linked-with .linked-vision { border-left: 5px solid #FFC726; }
+
+#contents #edit-page #NodeEditForm { background: url("../../img/gray_dot_line_500.png") no-repeat scroll left bottom transparent; color: #A7A7A7; padding-bottom: 5px; }
+#contents #edit-page #NodeEditForm label strong { float: left; margin-left: 2px; }
+#contents #edit-page #NodeEditForm small { font-size: 12px; }
+
+#contents #edit-page #NodeEditForm input,
+#contents #edit-page #NodeEditForm textarea { background: none repeat scroll 0 0 #FAFAFA; border: 1px solid #7F9DB9; float: left; margin: 3px 0; min-height: 18px; padding: 2px; width: 384px; }
+
+#contents #edit-page #NodeEditForm .field-label,
+#contents #edit-page #NodeEditForm .field { float: left; width: 384px; }
+
+#contents #edit-page #NodeEditForm .limit { border: 1px solid #7F9DB9; color: #000000; float: right; height: 17px; margin: 3px 0; padding: 3px 0 2px; text-indent: 20px; width: 109px; }
+#contents #edit-page #NodeEditForm .limit.ok { background: url("../../img/icon_thumb_up.png") no-repeat scroll 1px 50% #F0FEE9; }
+#contents #edit-page #NodeEditForm .limit.bad { background: url("../../img/icon_thumb_down.png") no-repeat scroll 1px 50% #FFCFCF; }
+#contents #edit-page #NodeEditForm textarea#textlead { height: 49px; }
+#contents #edit-page #NodeEditForm textarea#text { height: 232px; }
+
+#contents #edit-page #NodeEditForm .row { margin-top: 4px; }
+#contents #edit-page #NodeEditForm .row.upload { margin: 10px 0 75px; }
+
+#contents #edit-page #NodeEditForm .row.upload .field,
+#contents #edit-page #NodeEditForm .row.upload .field-label,
+#contents #edit-page #NodeEditForm .row.upload .field input#upload { width: 307px !important; }
+
+#contents #edit-page #NodeEditForm .row.upload #browse,
+#contents #edit-page #NodeEditForm .row.upload #upload-file { height: 22px; }
+#contents #edit-page #NodeEditForm .row.upload #browse { font-weight: normal; margin: 4px 5px 0 10px; width: 80px; }
+#contents #edit-page #NodeEditForm .row.upload #upload-file { margin-top: 4px; width: 95px; }
+
+#contents #edit-page #language,
+#contents #edit-page #industry-classification,
+#contents #edit-page #innovation-type-classification,
+#contents #edit-page #visions-of-the-future-classification { background: url("../../img/gray_dot_line_500.png") no-repeat scroll left bottom transparent; padding-bottom: 5px; }
+#contents #edit-page select { margin: 3px 0; width: 390px; }
+#contents #edit-page .submit { margin-top: 10px; }
+#contents #edit-page #content_send input { width: 100px; }
+#contents #edit-page #content_send input.ok { background: url("../../img/icon_thumb_up.png") no-repeat scroll 1px 50% #F0FEE9 }
+#contents #edit-page #content_send input.bad { background: url("../../img/icon_thumb_down.png") no-repeat scroll 1px 50% #FFCFCF; }
+
+
+#contents #edit-page #content_publish input, #contents #edit-page #content_publish label { float:left; }
+#contents #edit-page #content_publish input { width: 30px; }
+#contents #edit-page #content_publish label { margin-top: 3px; }
+
+
