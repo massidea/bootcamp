@@ -8,7 +8,7 @@
 		<li><a href="#related-statistics">Statistics</a></li>
 	</ul>
 	<div id="related-author"></div>
-	<div id="related-readers"></div>
+	<div id="related-readers"><?php echo $this->element('contents'.DS.'content_related_readers', array('cache' => false));?></div>
 	<div id="related-tags"></div>
 	<div id="related-related_companies"></div>
 	<div id="related-campaigns"></div>	

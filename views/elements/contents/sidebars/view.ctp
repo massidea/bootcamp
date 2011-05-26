@@ -72,7 +72,7 @@ $expandIcons = array('block' => 'icon_minus_tiny.png',
 <div id="linked-container" >
 	<h3 class="grey left small-padding-top-bottom pointerCursor">
 	<?php echo $html->image($expandIcons[$cookies['linked']],array('class' => 'icon')); ?>
-	Linked (<span><?php echo $linkedContentsCount; ?></span>)
+	Linked (<span><?php echo count($linkedContentsCount); ?></span>)
 	</h3>
 	<a href="#" id="linked-addnewlink-link" class="hoverLink right small-padding-top-bottom">
 		<?php echo $html->image('icon_link.png',array('class' => 'icon')); ?>

@@ -24,7 +24,7 @@
 
 
 Router::connect('/', array('controller' => 'contents', 'action' => 'browse', 'index'));
-	Router::connect('/contents/*', array('controller' => 'contents', 'action' => 'browse')); //This is needed to route all other traffic to browse
+	//Router::connect('/contents/*', array('controller' => 'contents', 'action' => 'browse')); //This is needed to route all other traffic to browse
 	Router::connect('/contents/link/', array('controller' => 'contents', 'action' => 'link'));
 	Router::connect('/contents/linksearch/', array('controller' => 'contents', 'action' => 'linksearch'));
 	Router::connect('/contents/setcookie/*', array('controller' => 'contents', 'action' => 'setcookie'));

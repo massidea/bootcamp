@@ -4,6 +4,7 @@ echo $this->Html->script(strtolower($this->name).DS.$this->action,array('inline'
 echo $this->element('global'.DS.'private_message', array('cache' => false)); 
 echo $this->element('global'.DS.'flag', array('cache' => false));
 echo $this->element('contents'.DS.'add_new_link_to_content', array('cache' => false));
+$this->set('content_class','contentWithTopAndSidebar');
 ?>
 
 <div id="content-page-head" class="left">
@@ -33,7 +34,7 @@ echo $this->element('contents'.DS.'add_new_link_to_content', array('cache' => fa
 	<div class="clear"></div>
 	<div id="content-page-context">
 			
-		<p id="content-body"><?php echo nl2br($content); ?></p>
+		<p id="content-body"><?php echo nl2br($content['body']); ?></p>
 
 		<?php foreach($specific as $type => $spec): ?>
 			<h3><?php 
