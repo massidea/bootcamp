@@ -186,6 +186,8 @@ $editData = $this->Content_->getContentDataForEdit();
 }
 $this->set('language_list',$this->Language->find('list',array('order' => array('Language.name' => 'ASC'))));
 $this->set('content_type',$content[0]['Node']['class']);
+$this->data=$editData;
+
 }
 }
 
