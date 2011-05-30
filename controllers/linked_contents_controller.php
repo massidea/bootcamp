@@ -25,19 +25,19 @@
  *  @license        GPL v2
  *  @version        1.0
  */
- 
+
 class LinkedContentsController extends AppController {
 	public $uses = array('LinkedContent','Contents','Tags','RelatedCompanies');
 	public $components = array('RequestHandler');
 	public $helpers = null; //Set helpers off
-	
+
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->autoRender = false;
 		$this->autoLayout = false;
 
 	}
-		
+
 	/**
 	 * contentLinkSearch action - method
 	 * Searches contents linked contents
@@ -49,32 +49,31 @@ class LinkedContentsController extends AppController {
 			if (!empty($this->data)) {
 				$title = $this->data['Content']['title'];
 				$id = $this->data['Content']['id'];
-				
-				 //Here should be code that finds contents
-                                $contents = $this->Nodes->find(array('type' => 'Content', 'published' => 1),array('order' => 'title DESC'),true);
-				if(empty($contents)) { echo "[]";die; }
-
-				$contentLinks = $this->LinkedContent->find('all',array('conditions' => array('from' => $id)));
+                                 
+				//Here should be code that finds contents
+				$contents = $this->Nodes->find(array('type' => 'Content', 'published' => 1),array('order' => 'title DESC'),true);
+				if(empty($contents)) { echo "[]";
+                                die; }
+                                $contentLinks = $this->LinkedContent->find('all',array('conditions' => array('from' => $id)));
 				$links = array();
 				foreach($contentLinks as $link) {
 					$links[] = $link['LinkedContent']['to'];
 				}
-							
+
 				$parsedContents = array();
 	            foreach($contents as $content) {
-	            	if(!in_array($content['Node']['id'],$links)) {
+	            	if(!in_array($content['Node']['id'],$links) &&  !($content['Node']['id']==$id)) {
 		            	$parsedContents[] = array('id' => $content['Node']['id'],
 		            							'class' => $content['Node']['class'],
 		            							'title' => $content['Node']['title']);
 	            	}
 	            }
-	         
+
 	            echo json_encode($parsedContents);
-                                        
 			}
 		}
 	}
-	
+
 	/**
 	 * add action - method
 	 * Links two things together
@@ -86,12 +85,12 @@ class LinkedContentsController extends AppController {
 			if (!empty($this->params['form'])) {
 				$to = $this->params['form']['to'];
 				$from = $this->params['form']['from'];
-				
+
 				echo 1;
 			}
 		}
 	}
-	
+
 	/**
 	 * delete action - method
 	 * Deletes a link between Ids
