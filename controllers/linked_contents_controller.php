@@ -50,8 +50,8 @@ class LinkedContentsController extends AppController {
 				$title = $this->data['Content']['title'];
 				$id = $this->data['Content']['id'];
 				
-				$contents; //Here should be code that finds contents
-				//$contents = $this->Nodes->find(array('type' => 'Content', 'published' => 1),array('order' => 'title DESC'),true);
+				 //Here should be code that finds contents
+                                $contents = $this->Nodes->find(array('type' => 'Content', 'published' => 1),array('order' => 'title DESC'),true);
 				if(empty($contents)) { echo "[]";die; }
 
 				$contentLinks = $this->LinkedContent->find('all',array('conditions' => array('from' => $id)));
@@ -70,6 +70,7 @@ class LinkedContentsController extends AppController {
 	            }
 	         
 	            echo json_encode($parsedContents);
+                                        
 			}
 		}
 	}
