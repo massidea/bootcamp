@@ -51,8 +51,9 @@ class LinkedContentsController extends AppController {
 				$id = $this->data['Content']['id'];
                                  
 				//Here should be code that finds contents
-				$contents = $this->Nodes->find(array('type' => 'Content', 'published' => 1),array('order' => 'title DESC'),true);
-				if(empty($contents)) { echo "[]";
+				$contents = $this->Nodes->find(array('type' => 'Content', 'published' => 1),array(),true);
+                                $contents = Set::sort($contents, '{n}.Node.title', 'asc');
+                                if(empty($contents)) { echo "[]";
                                 die; }
                                 $contentLinks = $this->LinkedContent->find('all',array('conditions' => array('from' => $id)));
 				$links = array();
