@@ -10,9 +10,9 @@ function expandCollapse(name,launcher,target) {
 function setImage(launcher,target) {
 	var expandButton = $(launcher).children(".icon");
 	if ($(target).is(':hidden')){
-		$(expandButton).attr("src", "/img/icon_plus_tiny.png");
+		$(expandButton).attr("src", "/~manu/img/icon_plus_tiny.png");
 	} else {
-		$(expandButton).attr("src", "/img/icon_minus_tiny.png");
+		$(expandButton).attr("src", "/~manu/img/icon_minus_tiny.png");
 	}
 }
 
