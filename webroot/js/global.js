@@ -195,7 +195,8 @@ $(document).ready(function(){
 		autoOpen: false,
 		dialogClass: "fixedDialog",
 		width: 700,
-		height: 100
+		height: 400,
+                position:'top'
 	});
 	
 	$("#privacy").dialog({
@@ -215,7 +216,7 @@ $(document).ready(function(){
 //			eventAnimate($(this));
 	});
         $("#terms_link").click(function(){
-            $("#privacy").dialog("open");
+            $("#terms").dialog("open");
             return false;
         });
 	
