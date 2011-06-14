@@ -28,7 +28,7 @@
 
 class LinkedContentsController extends AppController {
 	public $uses = array('LinkedContent','Contents','Tags','RelatedCompanies');
-	public $components = array('RequestHandler');
+	public $components = array('RequestHandler', 'DataHandler');
 	public $helpers = null; //Set helpers off
 
 	public function beforeFilter() {
@@ -49,13 +49,12 @@ class LinkedContentsController extends AppController {
 			if (!empty($this->data)) {
 				$title = $this->data['Content']['title'];
 				$id = $this->data['Content']['id'];
-                                 
-				//Here should be code that finds contents
-				$contents = $this->Nodes->find(array('type' => 'Content', 'published' => 1),array(),true);
-                                $contents = Set::sort($contents, '{n}.Node.title', 'asc');
-                                if(empty($contents)) { echo "[]";
-                                die; }
-                                $contentLinks = $this->LinkedContent->find('all',array('conditions' => array('from' => $id)));
+
+				$contents; //Here should be code that finds contents
+				$contents = $this->Nodes->find(array('type' => 'Content', 'published' => 1, 'Contents.id <>'=>$id),array('order' => 'Contents.title ASC'),true);
+				if(empty($contents)) { echo "[]";die; }
+
+				$contentLinks = $this->LinkedContent->find('all',array('conditions' => array('from' => $id)));
 				$links = array();
 				foreach($contentLinks as $link) {
 					$links[] = $link['LinkedContent']['to'];
@@ -63,7 +62,7 @@ class LinkedContentsController extends AppController {
 
 				$parsedContents = array();
 	            foreach($contents as $content) {
-	            	if(!in_array($content['Node']['id'],$links) &&  !($content['Node']['id']==$id)) {
+	            	if(!in_array($content['Node']['id'],$links)) {
 		            	$parsedContents[] = array('id' => $content['Node']['id'],
 		            							'class' => $content['Node']['class'],
 		            							'title' => $content['Node']['title']);
@@ -86,7 +85,7 @@ class LinkedContentsController extends AppController {
 			if (!empty($this->params['form'])) {
 				$to = $this->params['form']['to'];
 				$from = $this->params['form']['from'];
-
+                                $this->Nodes->link($from,$to);
 				echo 1;
 			}
 		}

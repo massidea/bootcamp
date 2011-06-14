@@ -65,6 +65,7 @@ function searchFromData(searchquery,data) {
 	var returns = [];
 	var options = $("#LinkSearchOptionsViewForm > input:checkbox");
 	$.each(data,function(){
+            console.log(this.id);
 		if(this.title.toLowerCase().indexOf(searchquery) > -1 || searchquery.length == 0){
 			if(this['class'] == 'challenge' && options[0].checked) {
 				returns.push(this);
@@ -80,7 +81,7 @@ function searchFromData(searchquery,data) {
 
 
 
-function linkContents(link,undo) {
+function linkContents(link,undo) { 
 	var amountContainer = $("#linked-container > h3 > span");
 	var toId = link.id.split('-');
 	var linkData = {from:	$("#ContentsLinkForm > #ContentId").val(),
