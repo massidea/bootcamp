@@ -6,7 +6,7 @@ function flagPage(formData) {
 		success: function(data) {
 			if(data == "1") {
 				resetFlash();
-				setFlash("Page was flagged successfully");
+				setFlash("Page was flagged successfully","successfull");
 				showFlash();
 				return true;
 			} else {
