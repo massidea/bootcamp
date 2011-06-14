@@ -216,6 +216,7 @@ $(document).ready(function(){
 	});
         $("#terms_link").click(function(){
             $("#privacy").dialog("open");
+            return false;
         });
 	
 	/**
