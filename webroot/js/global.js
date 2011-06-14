@@ -212,7 +212,7 @@ $(document).ready(function(){
 	});
 	
 	$("#loginlink").click(function() {
-			eventAnimate($(this));
+//			eventAnimate($(this));
 	});
 	
 	/**
