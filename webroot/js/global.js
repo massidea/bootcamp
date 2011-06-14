@@ -214,6 +214,9 @@ $(document).ready(function(){
 	$("#loginlink").click(function() {
 //			eventAnimate($(this));
 	});
+        $("#terms_link").click(function(){
+            $("#privacy").dialog("open");
+        });
 	
 	/**
 	 * Clicking add new content button:
