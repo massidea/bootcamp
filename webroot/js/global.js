@@ -219,6 +219,9 @@ $(document).ready(function(){
             $("#terms").dialog("open");
             return false;
         });
+        $(".add_new_info a").click(function(){
+            $("#addNewContentDialog").dialog("close");
+        });
 	
 	/**
 	 * Clicking add new content button:
