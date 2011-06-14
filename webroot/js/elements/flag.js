@@ -50,7 +50,7 @@ function initFlagDialog() {
 	
 	$("#flagAddForm").submit(function(){
 		var chars = countCharactersLeft(message,limit);
-		if(chars < 0 || chars == limit) {
+		if(chars <0) {
 			eventAnimate(message);
 		} else {
 			flagPage($(this).serializeArray());
