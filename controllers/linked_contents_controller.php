@@ -102,6 +102,7 @@ class LinkedContentsController extends AppController {
 			if (!empty($this->params['form'])) {
 				$to = $this->params['form']['to'];
 				$from = $this->params['form']['from'];
+                                $this->Nodes->removeLink($from, $to);
 
 				echo 1;
 			}
