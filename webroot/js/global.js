@@ -178,7 +178,7 @@ $(document).ready(function(){
 		closeOnEscape: true,
 		draggable: false,
 		modal: true,
-		resizable: true,
+		resizable: false,
 		title: 'Select content type',
 		dialogClass: "fixedDialog",
 		autoOpen: false,

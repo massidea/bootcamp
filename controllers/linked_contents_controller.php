@@ -28,7 +28,7 @@
 
 class LinkedContentsController extends AppController {
 	public $uses = array('LinkedContent','Contents','Tags','RelatedCompanies');
-	public $components = array('RequestHandler', 'DataHandler');
+	public $components = array('RequestHandler');
 	public $helpers = null; //Set helpers off
 
 	public function beforeFilter() {
@@ -50,8 +50,8 @@ class LinkedContentsController extends AppController {
 				$title = $this->data['Content']['title'];
 				$id = $this->data['Content']['id'];
 
-				$contents; //Here should be code that finds contents
-				$contents = $this->Nodes->find(array('type' => 'Content', 'published' => 1, 'Contents.id <>'=>$id),array('order' => 'Contents.title ASC'),true);
+				//Here should be code that finds contents
+				$contents = $this->Nodes->find(array('type' => 'Content', 'published' => 1, 'Contents.id <>'=>$id),array('order' => 'Contents.title'),true);
 				if(empty($contents)) { echo "[]";die; }
 
 				$contentLinks = $this->LinkedContent->find('all',array('conditions' => array('from' => $id)));
@@ -72,6 +72,9 @@ class LinkedContentsController extends AppController {
 	            echo json_encode($parsedContents);
 			}
 		}
+                else{
+                    $this->redirect('/');
+                }
 	}
 
 	/**
@@ -89,6 +92,9 @@ class LinkedContentsController extends AppController {
 				echo 1;
 			}
 		}
+ else {
+    $this->redirect('/');
+}
 	}
 
 	/**
@@ -102,10 +108,12 @@ class LinkedContentsController extends AppController {
 			if (!empty($this->params['form'])) {
 				$to = $this->params['form']['to'];
 				$from = $this->params['form']['from'];
-                                $this->Nodes->removeLink($from, $to);
-
+                                $this->Nodes->removeLink($from,$to);
 				echo 1;
 			}
 		}
+                else{
+                    $this->redirect('/');
+                }
 	}
 }

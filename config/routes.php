@@ -34,7 +34,7 @@ Router::connect('/', array('controller' => 'contents', 'action' => 'browse', 'in
 	Router::connect('/contents/challenge', array('controller' => 'contents', 'action' => 'browse', 'challenge'));
 	Router::connect('/contents/idea', array('controller' => 'contents', 'action' => 'browse', 'idea'));
 	Router::connect('/contents/vision', array('controller' => 'contents', 'action' => 'browse', 'vision'));
-        Router::connect('/linked_contents/*', array('controller' => 'contents', 'action' => 'browse'));
+        
 	
 	
 	
