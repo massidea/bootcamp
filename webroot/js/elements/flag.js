@@ -1,3 +1,4 @@
+var flagged=0;
 function flagPage(formData) {
 	$.ajax({ 
 		type: 'POST',
@@ -5,8 +6,9 @@ function flagPage(formData) {
 		url: jsMeta.baseUrl+"/flags/add/",
 		success: function(data) {
 			if(data == "1") {
+                                flagged=1;
 				resetFlash();
-				setFlash("Page was flagged successfully");
+				setFlash("Page was flagged successfully","successfull");
 				showFlash();
 				return true;
 			} else {
@@ -19,7 +21,7 @@ function flagPage(formData) {
 function initFlagDialog() {
 	var message = $("#flagDescription");
 	var characters = $("#flagCharacters");
-
+        
 	var limit = 500;
 	$(characters).html(limit);
 	$(message).live("keydown keyup change",function(){ 
@@ -50,7 +52,7 @@ function initFlagDialog() {
 	
 	$("#flagAddForm").submit(function(){
 		var chars = countCharactersLeft(message,limit);
-		if(chars < 0 || chars == limit) {
+		if(chars < 0) {
 			eventAnimate(message);
 		} else {
 			flagPage($(this).serializeArray());
@@ -63,7 +65,12 @@ function initFlagDialog() {
 $(document).ready(function(){
 	initFlagDialog();
 	$(".flag-page > a").click(function(){
-		$("#flag-page").dialog('open');
+                if(flagged){
+                    $(this).text("Already Flagged!");
+                }
+                else{
+                    $("#flag-page").dialog('open');
+                }
 		return false;
 	});
 	

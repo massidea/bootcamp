@@ -28,6 +28,7 @@
 
 class PrivateMessagesController extends AppController {
 	var $components = array('RequestHandler');
+        var $helpers = array('Form', 'Html', 'Javascript', 'Time');
 	
 	public function beforeFilter() {
 		parent::beforeFilter();
@@ -52,7 +53,11 @@ class PrivateMessagesController extends AppController {
 			$this->redirect('/');
 		}
 	}
-	
+
+        public function browse(){
+            $private_messages=$this->PrivateMessage->find('all');
+            $this->set('messages',$private_messages);
+        }
 	
 	
 }

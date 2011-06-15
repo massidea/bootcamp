@@ -178,7 +178,7 @@ $(document).ready(function(){
 		closeOnEscape: true,
 		draggable: false,
 		modal: true,
-		resizable: true,
+		resizable: false,
 		title: 'Select content type',
 		dialogClass: "fixedDialog",
 		autoOpen: false,
@@ -195,7 +195,8 @@ $(document).ready(function(){
 		autoOpen: false,
 		dialogClass: "fixedDialog",
 		width: 700,
-		height: 100
+		height: 400,
+                position:'top'
 	});
 	
 	$("#privacy").dialog({
@@ -212,8 +213,15 @@ $(document).ready(function(){
 	});
 	
 	$("#loginlink").click(function() {
-			eventAnimate($(this));
+//			eventAnimate($(this));
 	});
+        $("#terms_link").click(function(){
+            $("#terms").dialog("open");
+            return false;
+        });
+        $(".add_new_info a").click(function(){
+            $("#addNewContentDialog").dialog("close");
+        });
 	
 	/**
 	 * Clicking add new content button:

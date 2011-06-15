@@ -24,16 +24,17 @@
 
 
 Router::connect('/', array('controller' => 'contents', 'action' => 'browse', 'index'));
-	Router::connect('/contents/*', array('controller' => 'contents', 'action' => 'browse')); //This is needed to route all other traffic to browse
+	Router::connect('/contents/', array('controller' => 'contents', 'action' => 'browse')); //This is needed to route all other traffic to browse
 	Router::connect('/contents/link/', array('controller' => 'contents', 'action' => 'link'));
 	Router::connect('/contents/linksearch/', array('controller' => 'contents', 'action' => 'linksearch'));
 	Router::connect('/contents/setcookie/*', array('controller' => 'contents', 'action' => 'setcookie'));
 	Router::connect('/contents/view/*', array('controller' => 'contents', 'action' => 'view'));
 	Router::connect('/contents/edit/*', array('controller' => 'contents', 'action' => 'edit'));
-	Router::connect('/contents/add/*', array('controller' => 'contents', 'action' => 'add'));
-	Router::connect('/contents/challenge/', array('controller' => 'contents', 'action' => 'browse', 'challenge'));
-	Router::connect('/contents/idea/', array('controller' => 'contents', 'action' => 'browse', 'idea'));
-	Router::connect('/contents/vision/', array('controller' => 'contents', 'action' => 'browse', 'vision'));
+	Router::connect('/contents/add/', array('controller' => 'contents', 'action' => 'add'));
+	Router::connect('/contents/challenge', array('controller' => 'contents', 'action' => 'browse', 'challenge'));
+	Router::connect('/contents/idea', array('controller' => 'contents', 'action' => 'browse', 'idea'));
+	Router::connect('/contents/vision', array('controller' => 'contents', 'action' => 'browse', 'vision'));
+        
 	
 	
 	
