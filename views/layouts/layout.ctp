@@ -43,7 +43,7 @@ echo $html->docType('xhtml11');
 
 </head>
 <body>
-	<!--[if lt IE 7]> <span id="iewhine">Internet Explorer version 6 and below are not supported. IE 6 SUCKS!! Please update your browser for your own security.<br/> <a href="http://www.microsoft.com/windows/internet-explorer/worldwide-sites.aspx">Download newer version here</a> </span><![endif]-->
+	<!--[if lt IE 7]> <span id="iewhine">Internet Explorer version 6 and below are not supported. Please update your browser for your own security.<br/> <a href="http://www.microsoft.com/windows/internet-explorer/worldwide-sites.aspx">Download newer version here</a> </span><![endif]-->
 	<div id="alert"><?php //This element is hidden because its used to notify users if we are going to do updates to our site. 
 		echo $this->element($layout.'alert', array('cache' => false)); 
 	?> 
