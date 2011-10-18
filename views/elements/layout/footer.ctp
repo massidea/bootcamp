@@ -13,7 +13,7 @@
 <div class="left">
 	<p>This project is funded by</p>
 	<a href="http://www.rakennerahastot.fi/rakennerahastot/en/index.jsp">
-		<?php echo $html->image('footer.png',array('alt' => 'Footer')); ?>
+		<?php echo $html->image('footer1.png',array('alt' => 'Footer')); ?>
     </a>
 </div>
 
